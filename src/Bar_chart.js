@@ -47,6 +47,13 @@ const BarChart = () => {
         
         const chart = chartContainer.append('g');
 
+        //Tooltip
+        const tooldiv = d3.select('#chartArea')
+                        .append('div')
+                        .style('visibility', 'hidden')
+                        .style('position', 'absolute')
+                        .style('background-color', 'white')
+
         chart.append('g').call(d3.axisBottom(x).tickSizeOuter(0))
              .attr('transform', `translate(0, ${chartheight})`)
              .attr('color', 'black')
@@ -58,11 +65,27 @@ const BarChart = () => {
             .enter()
             .append('rect')
             .classed('bar', true)
-            .attr('fill', 'red')
+            .attr('fill', '#DC143C')
             .attr('width', x.bandwidth())
             .attr('height',(data) => chartheight - y(data.total_properties))
             .attr('x', (data) => x(data.neighbourhood_group))
             .attr('y', (data) => y(data.total_properties))
+            .on('mouseover', (e,d)=>{
+                tooldiv.style('visibility', 'visible')
+                        .text("Average rental price in " + `'${d.neighbourhood_group}'`+ " is " + `'${d.average_price}'`)
+                        
+
+
+            })
+            .on('mousemove',(e,d) => {
+              tooldiv.style('top', (e.pageY -50) +'px')
+                                   .style('left', (e.pageX -50) +'px') 
+            })
+            .on('mouseout',() => {
+                            
+                tooldiv.style('visibility', 'hidden')
+            })
+
 
             chart.selectAll('.bar').data(selectedData, data => data.neighbourhood_group).exit().remove();
 
@@ -129,31 +152,35 @@ const BarChart = () => {
     return (
     
       
-      <div>
+      <div className = "barchart">
           <body>
-            <h2 align = "center"> Total no of properties in every NewYork Neighbourhood</h2>
-            <h4 align="center">Tip : Select the checkbox to see the specific neighbourhood</h4>
+            <h1 align = "center"> Total properties in every NewYork Neighbourhood</h1>
+            <h5 align="center">
+            <p>Tip : Select the checkbox to see the count of a specific neighbourhood</p>
+                    <p>Mouse hover over each bar gives the Average rental price in the neighbourhood</p>
+            </h5>
 
-            <div>
+            <div className = 'chart'> 
                 <div id = 'chartArea'>
                     <svg ref = {barChart}></svg>
                 </div>
                 <div id = 'data'>
-                    <ul></ul>
+                    <ul ></ul>
                 </div>
             </div>
 
-            <p align="center">Manhattan and Brooklyn areas have the maximum rentals </p>
+            <p align="center">Manhattan and Brooklyn seem to be the most popular areas with maximum rentals 
+            and greater average rental prices</p>
                     
            
             <Link to ="/">
-                <i className="material-icons" style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
-                <i className="material-icons"style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
+                <i className="material-icons" style = {{color : "#DC143C", float :"right"}}>arrow_forward_ios</i>
+                <i className="material-icons"style = {{color : "#DC143C", float :"right"}}>arrow_forward_ios</i>
                 </Link>
 
                 <Link to ="/pie">
-                <i className="material-icons" style = {{color : "black", float :"left"}}>arrow_back_ios</i>
-                <i className="material-icons"style = {{color : "black", float :"left"}}>arrow_back_ios</i>
+                <i className="material-icons" style = {{color : "#DC143C", float :"left"}}>arrow_back_ios</i>
+                <i className="material-icons"style = {{color : "#DC143C", float :"left"}}>arrow_back_ios</i>
                 </Link>
           </body>
     </div>

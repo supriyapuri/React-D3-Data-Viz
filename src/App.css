@@ -56,6 +56,8 @@ li{
   text-shadow: 25px 20 px;
   color: black;
   font-weight: 500;
+  font-size: 20px;
+
 }
 
 text{
@@ -116,4 +118,29 @@ text{
   text-align: justify;
  
 }
+
+.chart{
+  padding: 30px; 
+  box-shadow: 10px 10px 5px grey;
+  box-sizing: border-box;
+  margin: 10px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns : 50% 50%
+}
+
+.barchart{
+  position: relative; 
+  height: 100vh;
+  width: 98%;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgIBwcHCAgHBwcHBwoHBwcHBw8ICQcKFREiIiARHxMYHSggGBolGx8VITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDisZFRkrKzcrKzcrNystLSsrNy0rKysrNy03Ky0rKy0rKysrKysrLTcrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAaEAEBAQEBAQEAAAAAAAAAAAAAEQESAgNh/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAECAwQGBf/EABoRAQEBAQEBAQAAAAAAAAAAAAARARITAgP/2gAMAwEAAhEDEQA/APpefl+Ovn5PV5+Tp5+T8LMfSb+jzefk6+fm9Hn5t582sxz37efPm6efDvnhrPDUZ37cc8NZ5ds8HKp0555ajfKxUrEWNwgViEbhBazCNQiLWYRqLArEI3mLArnCOnJyL05wjpycodOfKcuvJyL048py7cnIvTjynLvyci9uHKcu/JyHbz75TfL0cJwNejzb5OHo4OEi+jzcJw9PCcEX0cs+beeHozwueUx4unHPDeeHXPK8tJ05Z5Xl0hFSsQjcIq1iEbiQWswjUFVmEaIi1mEaiwKzCNwglZixqEQrMI1FgViEbiwKxCNwiJWIkdIQOnOHLpCB058nLpCKdOXJy68nIdOPJy7c4nIvbjycu3JyHacry6xIy4VzhG4KrEI0iqyjWorSCgrIoqoKACgIoIgooIoIgKoVFg0M1mEaBKkIqhWYRoErMI0sCsQjcFKxCNwglImtJrmM6jWstNIi6itYiKiqIqCiKKqKACoogqKiAKILEUQVFRBpARQBAFEAAFBQgAhCCqJrKo5umYiLqK1E1FZVpA1FFQBRAVRUEFEURQQRVQEaEVEVWVGVVloQVARQAUQEUQBVQUURRGUKm6y7w1BKLBCoqwQRVABQEBRFAAEURUQVAZVUBGhBEVplRnVVkEaEAVUAUQUUARQFGEqVEegBBRAFEAAEFAAABFEBFEBFEURVZVEURRlVZURRFBRARoQBoQBVQVFVAHJBB6AAU1FAQVAEUCoLAEFAQUEqCgiaGgiiCCqyokWrWSokaGVEjVGVoRqlZqqkaVlQaEVUUAHAQHpUAQBVRBQEFAqJGgSswaiQKgsIggRAAAEKlQUSlCLSpSokaozVoRoZq1UjS1iqEbxcYzWqJGsVnNVWWsVMVUeVcZrWI9OtCY1gzopiqzUI0QZrMWLFgVmEahBKzCNxIFYhG4m4FYiNbiajVYRrWdGkSrrOoqiJRYtKzSixqrWKtCNVayokaWsVaJG1xjNaxWdxvFxnGsGdaxpnGlY148awGXq1rGsBXPWsXMBWNVYAxSLAEpFiCpWokQAiQEXNZ1nQG8Z1nQRvGNZ0EdMSpQGom6UBoqgItWoCNVc1AZaxrAVnWsawFc9bxoFY1//Z");
+  background-size: cover;
+  padding:10px;
+  
+
+}
+
 
