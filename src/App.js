@@ -1,22 +1,12 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Dataset from './Dataset';
 import Home from './Home';
 import About from './About';
-import Pie from './Pie'
+import Pie from './Pie';
+import BarChart from './Bar_chart';
 
-
-const Chart2 = (props) => {
-  return(
-    
-    <div >
-      <h1>chart2</h1>
-      
-       
-      </div>
-  )
-}
 
 
 
@@ -49,8 +39,8 @@ function App() {
           <Route path ="/" exact component ={Home} />
           <Route exact path ="/Dataset" component= {Dataset} />
           <Route exact path ="/About" component= {About} />
-          <Route path= "/chart1" component= {Pie}  />
-          <Route exact path ="/chart2" component= {Chart2} />
+          <Route path= "/pie" component= {Pie}  />
+          <Route exact path ="/barchart" component= {BarChart} />
           
 
 

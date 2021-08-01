@@ -18,7 +18,7 @@ render(){
 
                     <p><h4>Triggers:</h4> The animation of chart 3 and 4 will be triggered automatically when the scene / slide is displayed. Changing filter in chart 3 will also trigger the chart animation.</p>
                     
-                    <Link to ="/Chart1">
+                    <Link to ="/Pie">
                         <i className="material-icons" style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
                         <i className="material-icons"style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
                     </Link>

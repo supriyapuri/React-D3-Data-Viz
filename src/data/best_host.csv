@@ -1,4 +1,4 @@
-host_id,number_of_reviews,count,neighbourhood_group,host_name
+host_id,number_of_reviews,number_of_properties,neighbourhood_group,host_name
 47621202,602.5,2,Queens,Dona
 4734398,599.3333333,3,Manhattan,Jj
 2369681,540,1,Manhattan,Carol
