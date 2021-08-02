@@ -37,9 +37,6 @@ function App() {
           <Route exact path ="/barchart" component= {BarChart} />
           <Route path= "/bubble" component= {Bubble}  />
 
-          
-
-
           <Route path = "*" component ={NotFound} />
           
         </Switch>
