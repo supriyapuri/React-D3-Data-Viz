@@ -25,10 +25,11 @@ render(){
                 <i className="material-icons">arrow_forward_ios</i>
                 </Link>
             
+            </p > 
+            <p align = "center">
+            <text > Tip: Use the next arrow to go to the next page. <br/> </text>
+            <text align = "center">  Click on the heading to "New York Airbnb Rentals" to read about interesting factors</text>
             </p>
-            <text>Use the next arrow to go to the next page. <br/> </text>
-            <text>Click on the heading to "New York Airbnb Rentals" to read about interesting factors</text>
-            
             
         </div>
         )

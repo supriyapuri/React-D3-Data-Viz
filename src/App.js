@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Pie from './Pie';
 import BarChart from './Bar_chart';
+import Bubble from './Bubble';
 
 
 
@@ -26,14 +27,7 @@ function App() {
         </head>
         
         <div>
-         {/* <Link to ="/"> <em>Home </em></Link> 
          
-         <Link to ="/chart1"><em>  Chart1 </em> </Link>
-         <Link to ="/chart2"><em>  chart2 </em> </Link>
-
-         
-         <hr /> */}
-        
          </div>
         <Switch>
           <Route path ="/" exact component ={Home} />
@@ -41,6 +35,8 @@ function App() {
           <Route exact path ="/About" component= {About} />
           <Route path= "/pie" component= {Pie}  />
           <Route exact path ="/barchart" component= {BarChart} />
+          <Route path= "/bubble" component= {Bubble}  />
+
           
 
 
