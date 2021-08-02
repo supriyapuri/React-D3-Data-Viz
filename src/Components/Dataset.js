@@ -39,7 +39,10 @@ render(){
             <i className="material-icons"style = {{color : "black", float :"left"}}>arrow_back_ios</i>
             </Link>
             
-        
+            <p align = "center" style = {{fontSize : "14", color : "#FF5A5F"}}>
+            <text > Tip: Use the next arrow to go to the next page and previous for the previous page. <br/> </text>
+            
+            </p>
         
         </body> 
         </div>

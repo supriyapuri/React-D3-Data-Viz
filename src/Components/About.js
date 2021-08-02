@@ -7,18 +7,18 @@ render(){
         return (
             <div className = "visualisation">
                 <body>
-                    <h2 style = {{textAlign: 'center'}}> About the Visualisation : to be updated</h2>
+                    <h2 style = {{textAlign: 'center'}}> About the Visualisation</h2>
                     <p><h4>Hybrid Structure :</h4> This narrative visualization follows an interactive slideshow hybrid structure to guide users through various selected scenarios. Data for each slide has been pre-processed and aggregated separately offline.</p>
 
-                    <p><h4>Scenes: </h4>Four scenes have been included in this visualization using consistent template and layout. Each slide can be navigated using arrows at left or right, or using the navigation dots on top. Or use keyboard left and right buttons.</p>
+                    <p><h4>Scenes: </h4>Three scenes have been included in this visualization using consistent template and layout. Each slide can be navigated using arrows at left or right. Each page's url changes as you navigate so the page can be accessed directly too.</p>
 
-                    <p><h4>Annotations: </h4> Interesting trends are annotated using orange color font and box in chart 1, 2 and 3.</p>
+                    <p><h4>Annotations: </h4> Every visualisation includes a tooltip which explains the data used and the tips on the page tell how can the annotations be viewed.</p>
 
-                    <p><h4>Parameters:</h4> Chart 2 and 3 include filters to display data from selected type of data source. Chart 4 includes a checkbox to reveal / hide grid that covers on top of the map.</p>
+                    <p><h4>Parameters:</h4> The second chart, `The Bar Chart` includes filters to display data from selected type of data source.  </p>
 
-                    <p><h4>Triggers:</h4> The animation of chart 3 and 4 will be triggered automatically when the scene / slide is displayed. Changing filter in chart 3 will also trigger the chart animation.</p>
                     
-                    <Link to ="/Pie">
+                    
+                    <Link to ="/bubble">
                         <i className="material-icons" style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
                         <i className="material-icons"style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
                     </Link>

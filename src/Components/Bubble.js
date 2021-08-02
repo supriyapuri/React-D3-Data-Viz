@@ -35,13 +35,13 @@ const Bubble = () => {
                 // Remove active class from all buttons
                 d3.selectAll('.button').classed('active', false);
                 // Find the button just clicked
-                var button = d3.select(this);
+                let button = d3.select(this);
           
                 // Set it as the active button
                 button.classed('active', true);
           
                 // Get the id of the button
-                var buttonId = button.attr('id');
+                let buttonId = button.attr('id');
           
                 // Toggle the bubble chart based on
                 // the currently clicked button.
@@ -52,8 +52,8 @@ const Bubble = () => {
         setupButtons();
 
         function showTitles(title, titleClass) {
-            var titleData = Object.keys(title);
-            var titles = bubble_svg.selectAll('.'+titleClass)
+            let titleData = Object.keys(title);
+            let titles = bubble_svg.selectAll('.'+titleClass)
               .data(titleData);
         
             console.log(titleData);
@@ -62,6 +62,7 @@ const Bubble = () => {
               .attr('x', function (d) { console.log('xxx', title[d]); return title[d].x; })
               .attr('y', function (d) { return title[d].y; })
               .attr('text-anchor', 'middle')
+              .style('color', 'white')
               .text(d => d); 
           }
 
@@ -104,7 +105,7 @@ const Bubble = () => {
           }
         
         const bubbleChart = () => {
-        var nodes = neighborhoodBubbleData.map(function (d) {
+        let nodes = neighborhoodBubbleData.map(function (d) {
             return {
               id: d.neighbourhood,
               radius: radiusScale(+d.avg_reviews),
@@ -174,16 +175,16 @@ const Bubble = () => {
 
         console.log(neighborhoodBubbleData);
         // Constants for sizing
-        // var width = document.documentElement.clientWidth;;
-        // var height = document.documentElement.clientHeight;
+        // const width = document.documentElement.clientWidth/2;;
+        // const height = document.documentElement.clientHeight/1.25;
         const width = 850;
-        const height = 850;
+        const height = 750;
 
         // Locations to move bubbles towards, depending
         // on which view mode is selected.
-        var center = { x: width / 2, y: height / 2 };
+        let center = { x: width / 2, y: height / 2 };
 
-        var ngCenters = {
+        let ngCenters = {
         Bronx: { x: 3 * width / 16, y: height / 3 },
         Brooklyn: { x: width / 3, y: 2* height / 3 },
         Manhattan: { x: 3 * width / 8, y: height / 3 },
@@ -191,7 +192,7 @@ const Bubble = () => {
         StatenIsland: { x: 5 * width / 8, y: height / 3 },
         }
 
-        var ngTitle = {
+        let ngTitle = {
             Bronx: { x: 2 * width / 10, y: height / 8 },
             Brooklyn: { x: 10 * width / 40, y: 9 * height / 14 },
             Manhattan: { x: 8 * width / 20, y: height / 8 },
@@ -205,9 +206,9 @@ const Bubble = () => {
           .attr('width', width)
           .attr('height', height);
 
-        var forceStrength = 0.03;
+        let forceStrength = 0.03;
 
-        var simulation = d3.forceSimulation()
+        let simulation = d3.forceSimulation()
         .velocityDecay(0.2)
         .force('x', d3.forceX().strength(forceStrength).x(center.x))
         .force('y', d3.forceY().strength(forceStrength).y(center.y))
@@ -217,15 +218,15 @@ const Bubble = () => {
         simulation.stop();
 
 
-        var fillColor = d3.scaleOrdinal(d3.schemePastel1)
+        let fillColor = d3.scaleOrdinal(d3.schemePastel1)
                             .domain(['Bronx', 'Brooklyn', 'Manhattan', 'Queens', 'StatenIsland']);
 
         //TODO: wrap in function                    
-        var maxAmount = d3.max(neighborhoodBubbleData, function (d) { return +d.avg_reviews; });
+        let maxAmount = d3.max(neighborhoodBubbleData, function (d) { return +d.avg_reviews; });
 
         console.log(maxAmount);
 
-        var radiusScale = d3.scalePow()
+        let radiusScale = d3.scalePow()
         .exponent(0.5)
         .range([2, 35])
         .domain([0, maxAmount]);
@@ -239,15 +240,27 @@ const Bubble = () => {
     return(
     <body>
 	<div class="section" id="background_bw">
-		<div id="bubble_title"><h1>Overview of All Reviewed Restaurants</h1></div>
+		<div id="bubble_title"><h2 align = "center" style ={{color :'white'}}>Overview of All Reviewed Airbnb in New York City</h2 ></div>
 		<div id="bubble_content">
 			<div id="bubble_text">
-				<p>​We are able to see that the bulk of the reviews are from NV with a star rating between 2-4.</p>
+				<p align = "center" style ={{color :'white'}}>​ Since Manhttan is the business capital and both Manhattan and Brooklyn
+          are renowned tourist spots, we can see that larger chunks of Airbnb are available in those neighbourhoods</p>
+          <p align = "center" style ={{color :'white'}}>Tip: use the two buttons below to see how Airbnb properties are ranked on the basis of reviews </p>
+          <p align = "center" style ={{color :'white'}}> Hover over the bubbles to view the Airbnb rental details</p>
 			</div>
+      <Link to ="/barchart">
+                        <i className="material-icons" style = {{color : "amber", float :"right"}}>arrow_forward_ios</i>
+                        <i className="material-icons"style = {{color : "amber", float :"right"}}>arrow_forward_ios</i>
+        </Link>
+
+        <Link to ="/About">
+                        <i className="material-icons" style = {{color : "amber", float :"left"}}>arrow_back_ios</i>
+                        <i className="material-icons"style = {{color : "amber", float :"left"}}>arrow_back_ios</i>
+        </Link>
 			<div id="bubble_container">
 				<div id="toolbar">
-					<a href="#" id="all" class="button active">All Reviews</a><br/>
-					<a href="#" id="ng_groups" class="button">Reviews By Neighbourhood Groups</a>
+					<a href="#" id="all" className ="button" >All Reviews</a><span></span>
+					<a href="#" id="ng_groups" className ="button" >Reviews By Neighbourhood Groups</a>
 					
 				</div>
 				<div id="vis">
@@ -255,6 +268,7 @@ const Bubble = () => {
                 </div>
 			</div>
 		</div>
+        
 	</div>	
 </body>
 

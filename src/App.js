@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Dataset from './Dataset';
-import Home from './Home';
-import About from './About';
-import Pie from './Pie';
-import BarChart from './Bar_chart';
-import Bubble from './Bubble';
+import Dataset from './Components/Dataset';
+import Home from './Components/Home';
+import About from './Components/About';
+import Pie from './Components/Pie';
+import BarChart from './Components/Bar_chart';
+import Bubble from './Components/Bubble';
 
 
 

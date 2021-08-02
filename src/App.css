@@ -144,3 +144,59 @@ text{
 }
 
 
+.section{
+  position: relative; 
+  height: 100%;
+  width: 98%;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/jpeg;base64,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");
+  background-size: cover;
+  padding:10px;
+  
+  
+
+}
+
+/* .button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+} */
+
+.button {
+  text-decoration: none;
+  padding: 8px 10px;
+  margin: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FF5A5F;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px rgb(212, 196, 181);
+
+}
+
+.button:hover {background-color: #7c0b0e}
+
+.button:active {
+  background-color: #7c0b0e;
+  box-shadow: 0 5px #e1d5ed;
+  transform: translateY(4px);
+}
+
+
+
+
+

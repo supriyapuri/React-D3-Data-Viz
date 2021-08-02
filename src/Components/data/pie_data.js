@@ -14,11 +14,7 @@ const data = [
     {host_id: 722320 , number_of_reviews : 414 , number_of_properties : 1,neighbourhood_group: "Queens", host_name : "Gladys & Bob"},
     {host_id: 26432133 , number_of_reviews : 403.4 , number_of_properties : 5,neighbourhood_group: "Queens", host_name : "Danielle"},
     {host_id: 20116872 , number_of_reviews : 401, number_of_properties : 1,neighbourhood_group: "Manhattan", host_name : "Michael"},
-    // {host_id: 47621202 , number_of_reviews : 396 , count : 1,neighbourhood_group: "Manhattan", host_name : "Dona"},
-    // {host_id: 47621202 , number_of_reviews : 394 , count : 1,neighbourhood_group: "Manhattan", host_name : "Dona"},
-    // {host_id: 47621202 , number_of_reviews : 392 , count : 1,neighbourhood_group: "Queens", host_name : "Dona"},
-    // {host_id: 47621202 , number_of_reviews : 388 , count : 1,neighbourhood_group: "Manhattan", host_name : "Dona"},
-    // {host_id: 47621202 , number_of_reviews : 385 , count : 1,neighbourhood_group: "Brooklyn", host_name : "Dona"},
+
     
 
 ]

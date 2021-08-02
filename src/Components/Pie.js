@@ -101,12 +101,12 @@ const Pie = () => {
                     provide the best service to gain maximum reviews. More reviews means more guests and more income. </p>
                     <p align="center"><b> Dona from Queens have an average 600+ reviews from the two properties that she owns in Queens.</b> </p>
 
-                        <Link to ="/barchart">
+                        <Link to ="/">
                                 <i className="material-icons" style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
                                 <i className="material-icons"style = {{color : "black", float :"right"}}>arrow_forward_ios</i>
                             </Link>
 
-                            <Link to ="/About">
+                            <Link to ="/barchart">
                                 <i className="material-icons" style = {{color : "black", float :"left"}}>arrow_back_ios</i>
                                 <i className="material-icons"style = {{color : "black", float :"left"}}>arrow_back_ios</i>
                         </Link>
